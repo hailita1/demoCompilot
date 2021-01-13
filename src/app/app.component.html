@@ -1,0 +1,75 @@
+<ngx-wrapper-copilot></ngx-wrapper-copilot>
+<!--BLOCK1-->
+<div class="navbar">
+  <ul>
+    <li *ngFor="let item of menu;let i = index" copilot [copilot-template]="ste"
+        [copilot-step]="item?.copilotOrder">
+
+      <ng-template #ste>
+        <div class="copilot-custom">
+
+          <!-- COPILOT 1-->
+          <div *ngIf="item.copilotOrder === 1">
+            <h3><b>Step 1</b></h3>
+            <p>Trang chủ</p>
+            <pre><a href="https://www.ihcm.vn" target="_blank">https://www.ihcm.vn</a></pre>
+            <div class="img-copilot">
+              <img
+                src="https://avatars0.githubusercontent.com/u/15802366?s=460&u=77ec7ef359e8ed842aef769693f1675c0ed460fd&v=4"
+                alt="">
+            </div>
+            <div class="footer-btn">
+              <button (click)="skip(item.copilotOrder + 1)" type="button">Next <i class="fas fa-angle-right"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- COPILOT 2-->
+
+          <div *ngIf="item.copilotOrder === 2">
+            <h3>Step 2</h3>
+            <p>If you want animate effects? Must install <a
+              href="https://animate.style/">animate.style</a></p>
+            <pre>npm install animate.css --save</pre>
+            <div class="img-copilot">
+              <img src="https://media.giphy.com/media/xT9IgG50Fb7Mi0prBC/giphy.gif" alt="">
+            </div>
+            <div class="footer-btn">
+              <button (click)="skip(item.copilotOrder - 1)" type="button"><i class="fas fa-angle-left"></i> Back
+              </button>
+              <button (click)="skip(item.copilotOrder + 1)" type="button">Next <i class="fas fa-angle-right"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- COPILOT 3-->
+          <div *ngIf="item.copilotOrder === 3">
+            <h3>Step 3</h3>
+            <p>Import in <b>angular.json</b></p>
+            <pre style="overflow-x: auto;">
+"styles": [
+  "./node_modules/animate.css/animate.min.css",
+  "./node_modules/ngx-copilot/src/lib/ngx-copilot.css",
+
+],
+            </pre>
+            <div class="img-copilot">
+              <img src="https://media.giphy.com/media/MGdfeiKtEiEPS/giphy.gif" alt="">
+            </div>
+            <div class="footer-btn">
+              <button (click)="skip(item.copilotOrder - 1)" type="button"><i class="fas fa-angle-left"></i> Back
+              </button>
+              <button (click)="done()" type="button">Done</button>
+            </div>
+          </div>
+        </div>
+      </ng-template>
+      <div class="wrapper">
+        <!-- {{item?.name}} -->
+        <i class="fas {{item?.icon}} fa-lg"></i>
+      </div>
+    </li>
+  </ul>
+</div>
+<!--BLOCK1-->
+

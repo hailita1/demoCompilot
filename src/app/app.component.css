@@ -1,0 +1,66 @@
+.github{
+  z-index: 999999 !important;
+  position: fixed;
+  bottom: 0;
+  cursor:pointer;
+  left: 0;
+  color:white;
+  background-color: #fd5d60;
+  padding:.5rem;
+  font-weight: 600;
+  font-size: .8rem;
+  margin:.5rem;
+  border-radius: .5rem;
+}
+
+.github a{
+  color:white;
+  text-decoration: none
+}
+
+.navbar{
+  width: 100px;
+  position: fixed;
+  height: 100%;
+  display: flex;
+  background-color: white;
+  box-shadow: 0px 0px 15px rgba(97, 97, 97, 0.22);
+}
+
+.navbar ul{
+  list-style-type: none;
+  padding: 0;
+  width: 100%;
+  margin: 0;
+}
+
+.navbar ul li{
+  text-align: center;
+  padding: 2rem 1.5rem;
+  /* background: red; */
+
+  border-bottom: solid 1px whitesmoke
+}
+
+.navbar ul li .fas{
+  color: #212121;
+}
+
+.navbar .wrapper{
+  padding: .5rem;
+}
+
+.content-wrapper{
+  padding:1rem 115px
+}
+
+.btn-init{
+  border: 0;
+  padding: .5rem;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 7px;
+  font-size: 1.5rem;
+  background-color: white;
+  box-shadow: 0 0 9px rgba(76, 76, 76, 0.35);
+}
